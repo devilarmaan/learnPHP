@@ -10,4 +10,7 @@ class Index{
 
 }
 
+$new = new Index();
+echo $new->sum(2, 4);
+
 ?>
