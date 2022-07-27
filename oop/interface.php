@@ -34,6 +34,8 @@ class Studnet implements Test2,Test3
 
 
 
+
+
 // using interface with class
 // class Something implements Test {
 //     public function xyz($cnaI, $howIcan){
