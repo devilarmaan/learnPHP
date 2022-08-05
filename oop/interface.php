@@ -52,3 +52,41 @@ echo $chek1->ho(33);
 echo "\n";
 echo $chek1->go(44);
 ?>
+
+<!-- 
+PHP - The final Keyword
+The final keyword can be used to prevent class inheritance or to prevent method overriding.
+
+The following example shows how to prevent class inheritance:
+
+Example -->
+
+
+
+
+final class Fruit {
+  // some code
+}
+
+// will result in error
+class Strawberry extends Fruit {
+  // some code
+}
+
+<?php
+class Fruit {
+  final public function intro() {
+  }
+}
+
+class Strawberry extends Fruit {
+  // will result in error
+//   public function intro() {
+  }
+// }
+
+
+?>
+
+
+

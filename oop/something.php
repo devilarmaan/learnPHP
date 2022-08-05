@@ -15,8 +15,14 @@ class Fruit {
     public $name;
     public $color;
 
-    function get_name($name){
+    // use constructor 
+    function __constructor($name, $color){
         $this->name = $name;
+        $this->color = $color;
+    }
+
+    function get_name(){
+        $this->name;
     }
 
     function set_name(){
@@ -24,8 +30,8 @@ class Fruit {
     }
 }
 
-$ans = new Fruit();
-$ans->get_name('Hello');
+$ans = new Fruit('Hello', 'red');
+$ans->get_name();
 echo '<br>';
 
 echo $ans->set_name();
@@ -36,6 +42,37 @@ echo $ans->set_name();
 // $ans = new Fruit();
 var_dump($ans instanceof Fruit);
 
+
+
+// Destructor function in php
+// As constructors and destructors helps reducing the amount of code, they are very useful!
+class Fruit2
+{
+    public $name;
+    public $color;
+
+    function __constructor($name){
+        $this->name = $name;
+    }
+    function __destructor(){
+        echo "the fruit is {$this->name}.";
+    }
+}
+
+$destru = new Fruit2('Yeaseen');
+
+
+// constants
+class Goodbye {
+    const LEAVING_MESSAGE = "Thank you for visiting W3Schools.com!";
+    public function byebye() {
+      echo self::LEAVING_MESSAGE;
+    }
+  }
+  
+  $goodbye = new Goodbye();
+  $goodbye->byebye();
+  ?>
 
 ?>
 
