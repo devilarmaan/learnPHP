@@ -1,16 +1,18 @@
-<?php
+ <?php
 
-class Index{
+// class Index{
 
-    function sum($x, $y){
-        $z = $x + $y;
+//     function sum($x, $y){
+//         $z = $x + $y;
 
-        return $z;
-    }
+//         return $z;
+//     }
 
-}
+// }
 
-$new = new Index();
-echo $new->sum(2, 4);
+// $new = new Index();
+// echo $new->sum(2, 4);
 
-?>
+
+
+?> 
