@@ -45,7 +45,21 @@ $flipped = array_flip($c);
 
 // print_r($c)
 
-$number = range(1, 20);
-print_r($number);
+$numbers = range(1, 20);
+// print_r($numbers);
+
+$newNumbers = array_map(function ($number) {
+    return "Number is ${number} ";
+}, $numbers);
+
+// print_r($newNumbers);
+
+$lessThen10 = array_filter($numbers, fn($number) => $number <= 10);
+// print_r($lessThen10);
+
+$sum = array_reduce($numbers, fn($carry, $number) => $carry + $number);
+
+// var_dump($sum);
+print_r($sum);
 
 ?>
